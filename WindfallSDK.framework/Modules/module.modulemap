@@ -1,0 +1,6 @@
+framework module WindfallSDK {
+  umbrella header "WindfallSDK.h"
+
+  export *
+  module * { export * }
+}
