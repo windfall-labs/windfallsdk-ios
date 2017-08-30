@@ -19,9 +19,10 @@ target 'YourTarget' do
 	pod 'WindfallSDK', '~> 0.7'
 end
 ```
-- Note: If you plan to use Scandit barcode scanning, please also add the following additional source and pod to your `Podfile`:
+- Note: If you plan to use Scandit barcode scanning, please also add the following source and pod to your `Podfile`:
 ```
-pod 'https://github.com/BlinkReceipt/PodSpecRepo.git'
+source 'https://github.com/BlinkReceipt/PodSpecRepo.git'
+...
 pod 'BRScandit', '~> 2.0'
 ```
 - After editing your Podfile, run `pod install` and then make sure to open the `.xcworkspace` file rather than the `.xcodeproj`
