@@ -19,7 +19,11 @@ target 'YourTarget' do
 	pod 'WindfallSDK', '~> 0.7'
 end
 ```
-
+- Note: If you plan to use Scandit barcode scanning, please also add the following additional source and pod to your `Podfile`:
+```
+pod 'https://github.com/BlinkReceipt/PodSpecRepo.git'
+pod 'BRScandit', '~> 2.0'
+```
 - After editing your Podfile, run `pod install` and then make sure to open the `.xcworkspace` file rather than the `.xcodeproj`
 
 ## Integration
@@ -36,7 +40,7 @@ end
 [BRScanManager sharedManager].licenseKey = @"YOUR-LICENSE-KEY";
 ```
 
-- If you have a Scandit App Key then add it as follows:
+- If you have a Scandit app key (and included the `BRScandit` pod above) then add it as follows:
 
 ```obj-c
 [BRScanManager sharedManager].scanditAppKey = @"YOUR-SCANDIT-KEY";
@@ -59,11 +63,11 @@ This scanning mode simulates the user snapping a series of still photos although
 ```obj-c
 - (IBAction)btnTouched:(id)sender {
 	BRScanOptions *scanOptions = [BRScanOptions new];
-    scanOptions.retailerId = WFRetailerWalgreens;
+  scanOptions.retailerId = WFRetailerWalgreens;
     
-    [[BRScanManager sharedManager] startStaticCameraFromController:self
-    												   scanOptions:scanOptions
-                                                      withDelegate:self];
+  [[BRScanManager sharedManager] startStaticCameraFromController:self
+    												                         scanOptions:scanOptions
+                                                    withDelegate:self];
 }
 ```
 
@@ -89,7 +93,7 @@ This scanning mode allows the user to simply hover over the receipt and receive 
 
 ```obj-c
 [[BRScanManager sharedManager] startLiveCameraFromController:self
-    											 scanOptions:scanOptions
+    											                       scanOptions:scanOptions
                                                 withDelegate:self];
 ```
 
