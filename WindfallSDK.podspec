@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WindfallSDK"
-  s.version      = "0.7.8"
+  s.version      = "0.7.9"
   s.summary      = "Windfall Receipt Scanning SDK"
 
   s.description  = <<-DESC
