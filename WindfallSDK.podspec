@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WindfallSDK"
-  s.version      = "0.7.9"
+  s.version      = "0.8.0"
   s.summary      = "Windfall Receipt Scanning SDK"
 
   s.description  = <<-DESC
@@ -28,6 +28,8 @@ This is the Windfall Receipt Scanning SDK
   s.dependency 'MBProgressHUD'
   s.dependency 'SimpleKeychain', '~> 0.7'
   s.dependency 'UIAlertController-BetterConstructor', '~> 0.1'
+  s.dependency 'CHCSVParser', '~> 2.1'
+  s.dependency 'HTMLKit'
 
   s.user_target_xcconfig = { 'WINDFALL_VERSION' => s.version }
 

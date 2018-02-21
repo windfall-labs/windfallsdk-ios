@@ -44,13 +44,13 @@
  */
 @property (strong, nonatomic, nullable) NSString *yelpApiKey;
 
+@property (strong, nonatomic, nullable) NSString *prodIntelKey;
+
 /**
  *  An array of NSString filepaths corresponding to the user images, if any, which were confirmed by the user during the scanning session.
  *  Only applies to static camera UX
  */
 @property (strong, nonatomic, nullable) NSArray<NSString*> *userFramesFilepaths;
-
-
 
 /**------------------*/
 /** @name Methods    */

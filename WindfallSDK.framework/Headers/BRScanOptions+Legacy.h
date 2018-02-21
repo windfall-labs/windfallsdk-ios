@@ -22,9 +22,4 @@ typedef NS_ENUM(NSUInteger, WFOcrModel) {
  */
 @property (nonatomic) WFOcrModel ocrModel;
 
-/**
- Whether to enable logo detection
- */
-@property (nonatomic) BOOL detectLogo;
-
 @end
